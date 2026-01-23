@@ -1,0 +1,520 @@
+:root {
+    --cream: #f8f4ed;
+    --dark-brown: #2a1810;
+    --warm-brown: #5c4033;
+    --gold: #d4a574;
+    --rust: #8b4513;
+    --text-primary: #1a1410;
+    --text-secondary: #6b5d52;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Pro', serif;
+    background-color: var(--cream);
+    color: var(--text-primary);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Grain texture overlay */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 1000;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f4ed 0%, #ede4d8 100%);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out 0.3s forwards;
+}
+
+.title-block {
+    margin-bottom: 3rem;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 900;
+    color: var(--dark-brown);
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 0.95;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--text-secondary);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero-quote {
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-style: italic;
+    color: var(--warm-brown);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    border-left: 3px solid var(--gold);
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.5s forwards;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes scrollLine {
+    0%, 100% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
+
+/* MAIN CONTENT */
+.poems-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.intro-section {
+    margin-bottom: 5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.intro-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* POEM CARDS */
+.poem-card {
+    margin-bottom: 4rem;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(42, 24, 16, 0.08);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.poem-card[data-poem="1"] {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.poem-card[data-poem="2"] {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.poem-card[data-poem="3"] {
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.poem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(42, 24, 16, 0.15);
+}
+
+.card-number {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(212, 165, 116, 0.15);
+    line-height: 1;
+    z-index: 0;
+}
+
+.card-content {
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.poem-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.poem-excerpt {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.poem-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+}
+
+.year {
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.collection {
+    font-style: italic;
+}
+
+.read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--warm-brown);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--gold);
+    border-radius: 2px;
+}
+
+.read-link:hover {
+    background: var(--gold);
+    color: var(--dark-brown);
+    transform: translateX(5px);
+}
+
+.read-link svg {
+    transition: transform 0.3s ease;
+}
+
+.read-link:hover svg {
+    transform: translateX(5px);
+}
+
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--dark-brown);
+    color: var(--cream);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* POEM PAGE STYLES */
+.poem-page {
+    background: white;
+}
+
+.poem-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(248, 244, 237, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(42, 24, 16, 0.1);
+    z-index: 100;
+}
+
+.nav-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+    color: var(--gold);
+    transform: translateX(-5px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-prev,
+.nav-next {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    color: var(--gold);
+}
+
+.poem-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.poem-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid var(--gold);
+}
+
+.poem-number {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.poem-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.poem-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.divider {
+    color: var(--gold);
+}
+
+.poem-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    line-height: 2;
+    color: var(--text-primary);
+    margin-bottom: 5rem;
+}
+
+.stanza {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.stanza:hover {
+    border-left-color: var(--gold);
+}
+
+.stanza p {
+    margin-bottom: 0.5rem;
+}
+
+.poem-context {
+    background: var(--cream);
+    padding: 3rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--gold);
+}
+
+.poem-context h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 1.5rem;
+}
+
+.poem-context p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.poem-context p:last-child {
+    margin-bottom: 0;
+}
+
+.poem-footer {
+    background: var(--dark-brown);
+    padding: 3rem 2rem;
+}
+
+.footer-nav {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-nav a {
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero-quote {
+        padding-left: 1rem;
+        border-left-width: 2px;
+    }
+
+    .poems-grid {
+        padding: 3rem 1rem;
+    }
+
+    .intro-section {
+        margin-bottom: 3rem;
+    }
+
+    .poem-card {
+        margin-bottom: 2.5rem;
+    }
+
+    .card-number {
+        font-size: 3rem;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .card-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .poem-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .poem-container {
+        padding: 2rem 1rem 4rem;
+    }
+
+    .poem-header {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .poem-text {
+        margin-bottom: 3rem;
+    }
+
+    .stanza {
+        padding-left: 0.5rem;
+    }
+
+    .poem-context {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
