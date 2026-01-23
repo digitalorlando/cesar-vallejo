@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masa - César Vallejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="poem-page">
+    <div class="grain-overlay"></div>
+    
+    <nav class="poem-nav">
+        <a href="index.html" class="nav-back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Volver</span>
+        </a>
+        <div class="nav-links">
+            <a href="poema1.html" class="nav-prev">← Anterior</a>
+            <a href="poema3.html" class="nav-next">Siguiente →</a>
+        </div>
+    </nav>
+
+    <main class="poem-container">
+        <header class="poem-header">
+            <span class="poem-number">Poema 02</span>
+            <h1 class="poem-page-title">Masa</h1>
+            <div class="poem-info">
+                <span>1937</span>
+                <span class="divider">•</span>
+                <span>España, Aparta de Mí Este Cáliz</span>
+            </div>
+        </header>
+
+        <article class="poem-text">
+            <div class="stanza">
+                <p>Al fin de la batalla,</p>
+                <p>y muerto el combatiente, vino hacia él un hombre</p>
+                <p>y le dijo: «¡No mueras, te amo tanto!»</p>
+                <p>Pero el cadáver ¡ay! siguió muriendo.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Se le acercaron dos y repitiéronle:</p>
+                <p>«¡No nos dejes! ¡Valor! ¡Vuelve a la vida!»</p>
+                <p>Pero el cadáver ¡ay! siguió muriendo.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Acudieron a él veinte, cien, mil, quinientos mil,</p>
+                <p>clamando: «¡Tanto amor, y no poder nada contra la muerte!»</p>
+                <p>Pero el cadáver ¡ay! siguió muriendo.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Le rodearon millones de individuos,</p>
+                <p>con un ruego común: «¡Quédate, hermano!»</p>
+                <p>Pero el cadáver ¡ay! siguió muriendo.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Entonces, todos los hombres de la tierra</p>
+                <p>le rodearon; les vio el cadáver triste, emocionado;</p>
+                <p>incorporóse lentamente,</p>
+                <p>abrazó al primer hombre; echóse a andar...</p>
+            </div>
+        </article>
+
+        <section class="poem-context">
+            <h3>Sobre el poema</h3>
+            <p>
+                "Masa" es uno de los poemas más conmovedores de César Vallejo, escrito en 1937 durante 
+                la Guerra Civil Española. Forma parte de "España, aparta de mí este cáliz", una colección 
+                póstuma dedicada al conflicto español y publicada en 1939, un año después de su muerte.
+            </p>
+            <p>
+                El poema presenta una visión esperanzadora sobre el poder del amor colectivo y la 
+                solidaridad humana. A través de una estructura incremental y repetitiva, Vallejo nos 
+                muestra cómo solo cuando toda la humanidad se une en un acto de amor, el milagro de 
+                la resurrección se hace posible. Es una poderosa alegoría sobre la hermandad universal 
+                y la resistencia ante la muerte.
+            </p>
+        </section>
+    </main>
+
+    <footer class="poem-footer">
+        <div class="footer-nav">
+            <a href="poema1.html">← Los Heraldos Negros</a>
+            <a href="index.html">Inicio</a>
+            <a href="poema3.html">Piedra Negra... →</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
