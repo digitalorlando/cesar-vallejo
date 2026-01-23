@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Heraldos Negros - César Vallejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="poem-page">
+    <div class="grain-overlay"></div>
+    
+    <nav class="poem-nav">
+        <a href="index.html" class="nav-back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Volver</span>
+        </a>
+        <div class="nav-links">
+            <a href="poema2.html" class="nav-next">Siguiente →</a>
+        </div>
+    </nav>
+
+    <main class="poem-container">
+        <header class="poem-header">
+            <span class="poem-number">Poema 01</span>
+            <h1 class="poem-page-title">Los Heraldos Negros</h1>
+            <div class="poem-info">
+                <span>1918</span>
+                <span class="divider">•</span>
+                <span>Los Heraldos Negros</span>
+            </div>
+        </header>
+
+        <article class="poem-text">
+            <div class="stanza">
+                <p>Hay golpes en la vida, tan fuertes... ¡Yo no sé!</p>
+                <p>Golpes como del odio de Dios; como si ante ellos,</p>
+                <p>la resaca de todo lo sufrido</p>
+                <p>se empozara en el alma... ¡Yo no sé!</p>
+            </div>
+
+            <div class="stanza">
+                <p>Son pocos; pero son... Abren zanjas obscuras</p>
+                <p>en el rostro más fiero y en el lomo más fuerte.</p>
+                <p>Serán tal vez los potros de bárbaros Atilas;</p>
+                <p>o los heraldos negros que nos manda la Muerte.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Son las caídas hondas de los Cristos del alma</p>
+                <p>de alguna fe adorable que el Destino blasfema.</p>
+                <p>Esos golpes sangrientos son las crepitaciones</p>
+                <p>de algún pan que en la puerta del horno se nos quema.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Y el hombre... Pobre... ¡pobre! Vuelve los ojos, como</p>
+                <p>cuando por sobre el hombro nos llama una palmada;</p>
+                <p>vuelve los ojos locos, y todo lo vivido</p>
+                <p>se empoza, como charco de culpa, en la mirada.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Hay golpes en la vida, tan fuertes... ¡Yo no sé!</p>
+            </div>
+        </article>
+
+        <section class="poem-context">
+            <h3>Sobre el poema</h3>
+            <p>
+                "Los Heraldos Negros" es el poema que da título a la primera colección de César Vallejo, 
+                publicada en 1918. Este poema inaugural establece los temas que marcarán toda su obra: 
+                el sufrimiento humano, la búsqueda de sentido ante el dolor, y una voz poética que 
+                cuestiona constantemente la existencia.
+            </p>
+            <p>
+                La imagen de los "golpes" como heraldos negros enviados por la muerte se ha convertido 
+                en una de las metáforas más poderosas de la poesía en español. Vallejo logra transmitir 
+                la impotencia del ser humano ante el sufrimiento inexplicable con una fuerza 
+                que resuena hasta hoy.
+            </p>
+        </section>
+    </main>
+
+    <footer class="poem-footer">
+        <div class="footer-nav">
+            <a href="index.html">Inicio</a>
+            <a href="poema2.html">Masa →</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
