@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>César Vallejo - Poemas Selectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <div class="title-block">
+                <h1 class="main-title">César Vallejo</h1>
+                <p class="subtitle">Santiago de Chuco, 1892 — París, 1938</p>
+            </div>
+            <p class="hero-quote">"Hay golpes en la vida, tan fuertes... ¡Yo no sé!"</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>desliza</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <main class="poems-grid">
+        <section class="intro-section">
+            <p class="intro-text">
+                Tres poemas fundamentales del poeta peruano que revolucionó la poesía latinoamericana 
+                con su lenguaje innovador y su profunda sensibilidad humana.
+            </p>
+        </section>
+
+        <article class="poem-card" data-poem="1">
+            <div class="card-number">01</div>
+            <div class="card-content">
+                <h2 class="poem-title">Los Heraldos Negros</h2>
+                <p class="poem-excerpt">
+                    Hay golpes en la vida, tan fuertes... ¡Yo no sé!<br>
+                    Golpes como del odio de Dios...
+                </p>
+                <div class="poem-meta">
+                    <span class="year">1918</span>
+                    <span class="collection">Los Heraldos Negros</span>
+                </div>
+                <a href="poema1.html" class="read-link">
+                    <span>Leer poema completo</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="poem-card" data-poem="2">
+            <div class="card-number">02</div>
+            <div class="card-content">
+                <h2 class="poem-title">Masa</h2>
+                <p class="poem-excerpt">
+                    Al fin de la batalla,<br>
+                    y muerto el combatiente, vino hacia él un hombre...
+                </p>
+                <div class="poem-meta">
+                    <span class="year">1937</span>
+                    <span class="collection">España, Aparta de Mí Este Cáliz</span>
+                </div>
+                <a href="poema2.html" class="read-link">
+                    <span>Leer poema completo</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+
+        <article class="poem-card" data-poem="3">
+            <div class="card-number">03</div>
+            <div class="card-content">
+                <h2 class="poem-title">Piedra Negra sobre una Piedra Blanca</h2>
+                <p class="poem-excerpt">
+                    Me moriré en París con aguacero,<br>
+                    un día del cual tengo ya el recuerdo...
+                </p>
+                <div class="poem-meta">
+                    <span class="year">1937</span>
+                    <span class="collection">Poemas Humanos</span>
+                </div>
+                <a href="poema3.html" class="read-link">
+                    <span>Leer poema completo</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>Sitio dedicado a la memoria de César Vallejo, uno de los más grandes poetas en lengua española.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
