@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Negra sobre una Piedra Blanca - César Vallejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="poem-page">
+    <div class="grain-overlay"></div>
+    
+    <nav class="poem-nav">
+        <a href="index.html" class="nav-back">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Volver</span>
+        </a>
+        <div class="nav-links">
+            <a href="poema2.html" class="nav-prev">← Anterior</a>
+        </div>
+    </nav>
+
+    <main class="poem-container">
+        <header class="poem-header">
+            <span class="poem-number">Poema 03</span>
+            <h1 class="poem-page-title">Piedra Negra sobre una Piedra Blanca</h1>
+            <div class="poem-info">
+                <span>1937</span>
+                <span class="divider">•</span>
+                <span>Poemas Humanos</span>
+            </div>
+        </header>
+
+        <article class="poem-text">
+            <div class="stanza">
+                <p>Me moriré en París con aguacero,</p>
+                <p>un día del cual tengo ya el recuerdo.</p>
+                <p>Me moriré en París —y no me corro—</p>
+                <p>tal vez un jueves, como es hoy, de otoño.</p>
+            </div>
+
+            <div class="stanza">
+                <p>Jueves será, porque hoy, jueves, que proso</p>
+                <p>estos versos, los húmeros me he puesto</p>
+                <p>a la mala y, jamás como hoy, me he vuelto,</p>
+                <p>con todo mi camino, a verme solo.</p>
+            </div>
+
+            <div class="stanza">
+                <p>César Vallejo ha muerto, le pegaban</p>
+                <p>todos sin que él les haga nada;</p>
+                <p>le daban duro con un palo y duro</p>
+            </div>
+
+            <div class="stanza">
+                <p>también con una soga; son testigos</p>
+                <p>los días jueves y los huesos húmeros,</p>
+                <p>la soledad, la lluvia, los caminos...</p>
+            </div>
+        </article>
+
+        <section class="poem-context">
+            <h3>Sobre el poema</h3>
+            <p>
+                "Piedra negra sobre una piedra blanca" es uno de los poemas más célebres de César Vallejo, 
+                incluido en "Poemas Humanos" (1939). Lo asombroso de este texto es su carácter profético: 
+                Vallejo murió efectivamente en París, un viernes lluvioso, el 15 de abril de 1938.
+            </p>
+            <p>
+                El poema juega con el tiempo verbal, mezclando presente y futuro, creando una atmósfera 
+                de fatalidad anticipada. Vallejo habla de su propia muerte en tercera persona, como si 
+                ya hubiera ocurrido, y elige el jueves —día de composición del poema— como el día de su 
+                muerte futura. La referencia a los "húmeros" (huesos de los brazos) y la imagen del poeta 
+                siendo golpeado sin motivo refuerzan el tema del sufrimiento injustificado que recorre 
+                toda su obra.
+            </p>
+        </section>
+    </main>
+
+    <footer class="poem-footer">
+        <div class="footer-nav">
+            <a href="poema2.html">← Masa</a>
+            <a href="index.html">Inicio</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
