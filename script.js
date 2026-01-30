@@ -1,3 +1,72 @@
+// Exit Intent Popup
+let exitPopupShown = false;
+
+function createExitPopup() {
+    const popup = document.createElement('div');
+    popup.className = 'exit-popup-overlay';
+    popup.innerHTML = `
+        <div class="exit-popup">
+            <div class="exit-popup-content">
+                <h2>¿Ya te vas?</h2>
+                <p class="exit-message">
+                    La poesía de César Vallejo merece un momento más de tu tiempo. 
+                    Sus versos contienen la esencia del sufrimiento y la esperanza humana.
+                </p>
+                <p class="exit-quote">
+                    "Hay golpes en la vida, tan fuertes... ¡Yo no sé!"
+                </p>
+                <div class="exit-buttons">
+                    <button class="btn-stay">Quedarme y seguir leyendo</button>
+                    <button class="btn-leave">Salir de todas formas</button>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(popup);
+
+    // Event listeners for buttons
+    const btnStay = popup.querySelector('.btn-stay');
+    const btnLeave = popup.querySelector('.btn-leave');
+
+    btnStay.addEventListener('click', () => {
+        popup.classList.remove('show');
+        setTimeout(() => popup.remove(), 300);
+    });
+
+    btnLeave.addEventListener('click', () => {
+        exitPopupShown = true;
+        window.location.href = 'about:blank';
+    });
+
+    // Close on overlay click
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('show');
+            setTimeout(() => popup.remove(), 300);
+        }
+    });
+
+    // Show popup with animation
+    setTimeout(() => popup.classList.add('show'), 10);
+}
+
+// Detect mouse leaving viewport (desktop)
+document.addEventListener('mouseout', (e) => {
+    if (!exitPopupShown && e.clientY <= 0 && e.relatedTarget == null && e.target.nodeName.toLowerCase() !== 'select') {
+        exitPopupShown = true;
+        createExitPopup();
+    }
+});
+
+// Detect beforeunload event (closing tab/window)
+window.addEventListener('beforeunload', (e) => {
+    if (!exitPopupShown) {
+        e.preventDefault();
+        e.returnValue = '¿Seguro que quieres dejar la poesía de César Vallejo?';
+        return e.returnValue;
+    }
+});
+
 // Smooth scroll behavior
 document.addEventListener('DOMContentLoaded', () => {
     // Add smooth scroll to all internal links
